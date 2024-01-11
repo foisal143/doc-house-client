@@ -1,9 +1,18 @@
 import { FaCalendar, FaDollarSign, FaRegStar, FaStar } from 'react-icons/fa';
 import Rating from 'react-rating';
 import { CiLocationOn } from 'react-icons/ci';
+import { Link } from 'react-router-dom';
 const DoctorCard = ({ doctor }) => {
-  const { name, image, price, location, category, availableTime, ratings } =
-    doctor;
+  const {
+    _id,
+    name,
+    image,
+    price,
+    location,
+    category,
+    availableTime,
+    ratings,
+  } = doctor;
   return (
     <div className="card mt-5 h-[559px] border p-3 card-compact w-full bg-base-100 shadow-xl">
       <figure className="h-1/2">
@@ -32,9 +41,11 @@ const DoctorCard = ({ doctor }) => {
           </p>
         </div>
         <div className="card-actions mt-5">
-          <button className="btn w-full btn-outline  btn-error">
-            View Profile
-          </button>
+          <Link className="w-full" to={`/doctor/${_id}`}>
+            <button className="btn w-full btn-outline  btn-error">
+              View Profile
+            </button>
+          </Link>
         </div>
       </div>
     </div>

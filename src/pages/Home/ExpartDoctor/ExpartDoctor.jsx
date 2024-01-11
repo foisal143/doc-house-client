@@ -1,14 +1,8 @@
-import { useEffect, useState } from 'react';
 import DoctorCard from '../../../components/DoctorCard/DoctorCard';
+import DoctorsData from '../../../utilites/doctorsData';
 
 const ExpartDoctor = () => {
-  const [doctors, setDoctor] = useState([]);
-
-  useEffect(() => {
-    fetch('doctor.json')
-      .then(res => res.json())
-      .then(data => setDoctor(data));
-  }, []);
+  const [doctors] = DoctorsData();
 
   return (
     <section className="mb-20 space-y-5">

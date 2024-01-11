@@ -25,7 +25,7 @@ const Bannar = () => {
           <h2 className="text-4xl  lg:text-6xl font-semibold">
             Your Best Medical <br /> Help Center
           </h2>
-          <p>
+          <p className="text-white">
             Lorem Ipsum is simply dummy text they are printing typesetting has
             been the industry’s stardard.
           </p>
