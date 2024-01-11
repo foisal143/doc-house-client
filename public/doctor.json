@@ -1,0 +1,312 @@
+[
+  {
+    "name": "Dr. Emily Johnson",
+    "image": "https://jhcfw.com/wp-content/uploads/2023/05/Johnson-WC-scaled.jpg",
+    "about": "Experienced medical professional dedicated to providing compassionate and comprehensive healthcare. Committed to patient well-being and ongoing medical education.",
+    "ratings": 4.8,
+    "availableTime": "Monday to Friday, 9 AM - 5 PM",
+    "reviews": [
+      {
+        "clientName": "Alice Thompson",
+        "clientImage": "https://my.clevelandclinic.org/provider/image?id=2142&width=235",
+        "details": "Dr. Johnson is exceptional. Her caring approach and thorough explanations make every visit reassuring. I highly recommend her.",
+        "clientRating": 5
+      },
+      {
+        "clientName": "Mark Davis",
+        "clientImage": "https://s3-prod.crainscleveland.com/s3fs-public/styles/width_375/public/HEROES09_305049970_AR_-1_0.jpg",
+        "details": "As a long-time patient, I can attest to Dr. Johnson's expertise. Her dedication to patient care is unmatched.",
+        "clientRating": 4.5
+      },
+      {
+        "clientName": "Sophie Williams",
+        "clientImage": "https://d2tgiyvz192tbr.cloudfront.net/providers/servlet/servlet.FileDownload?file=00P3900001EKmdhEAD",
+        "details": "I appreciate Dr. Johnson's commitment to holistic health. Her advice on preventive care is invaluable. A top-notch professional.",
+        "clientRating": 5
+      },
+      {
+        "clientName": "Alex Turner",
+        "clientImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfCn2NdNcVApk9-VvgpQ9VzVI3cxJD0vPALA&usqp=CAU",
+        "details": "Dr. Johnson's warm demeanor and expertise create a positive patient experience. I trust her medical advice wholeheartedly.",
+        "clientRating": 4.8
+      }
+    ],
+    "location": "City Hospital",
+    "price": "$150 per consultation",
+    "businessHours": {
+      "Monday": "9 AM - 5 PM",
+      "Tuesday": "9 AM - 5 PM",
+      "Wednesday": "9 AM - 5 PM",
+      "Thursday": "9 AM - 5 PM",
+      "Friday": "9 AM - 5 PM"
+    },
+    "hospitalLocations": [
+      {
+        "hospitalName": "City Hospital",
+        "address": "123 Medical Lane, Cityville, State 12345"
+      },
+      {
+        "hospitalName": "Unity Medical Center",
+        "address": "456 Health Street, Townsville, State 67890"
+      },
+      {
+        "hospitalName": "Wellness Clinic",
+        "address": "789 Wellness Avenue, Healthtown, State 54321"
+      }
+    ],
+    "category": "Internal Medicine",
+    "education": [
+      { "degree": "MD", "school": "University Medical School", "year": 2005 },
+      {
+        "degree": "PhD in Internal Medicine",
+        "school": "Medical Research Institute",
+        "year": 2010
+      }
+    ],
+    "services": [
+      "Routine Check-ups",
+      "Chronic Disease Management",
+      "Health Counseling",
+      "Vaccinations",
+      "Preventive Care"
+    ],
+    "specializations": [
+      "Cardiology",
+      "Diabetes Management",
+      "Geriatrics",
+      "Women's Health"
+    ],
+    "hospitalExperiences": [
+      { "hospitalName": "City Hospital", "yearsOfWork": 8 },
+      { "hospitalName": "Unity Medical Center", "yearsOfWork": 5 },
+      { "hospitalName": "Wellness Clinic", "yearsOfWork": 3 }
+    ],
+    "awards": [
+      {
+        "name": "Best Physician Award 2022",
+        "details": "Recognized for outstanding contributions to patient care, innovative medical practices, and dedication to advancing internal medicine."
+      },
+      {
+        "name": "Outstanding Service in Healthcare 2021",
+        "details": "Acknowledged for providing exceptional service and making significant contributions to the healthcare community in 2021."
+      },
+      {
+        "name": "Excellence in Internal Medicine 2020",
+        "details": "Awarded for excellence in the field of internal medicine, demonstrating high standards of medical knowledge, practice, and patient care."
+      },
+      {
+        "name": "Lifetime Achievement in Preventive Care 2018",
+        "details": "Honored with a lifetime achievement award for continuous dedication to preventive care and promoting a healthier community."
+      }
+    ]
+  },
+  {
+    "name": "Dr. Sarah Rodriguez",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTHVDN9NiWUocbOM4l6I54tpS_4F-sBL2IPw&usqp=CAU",
+    "about": "Passionate about pediatric care, Dr. Rodriguez focuses on creating a positive and comfortable environment for children. Committed to ensuring their well-being and development.",
+    "ratings": 4.5,
+    "availableTime": "Monday to Saturday, 9 AM - 5 PM",
+    "reviews": [
+      {
+        "clientName": "Lily Johnson",
+        "clientImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxrh8OXiTEj7GfIlHGhjH0v7-2OeVAkCBT0g&usqp=CAU",
+        "details": "Dr. Rodriguez is fantastic with kids. Her caring approach and expertise make every visit enjoyable for my child. Highly recommended!",
+        "clientRating": 4.8
+      },
+      {
+        "clientName": "Mike Thompson",
+        "clientImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfCn2NdNcVApk9-VvgpQ9VzVI3cxJD0vPALA&usqp=CAU",
+        "details": "My child feels at ease with Dr. Rodriguez. Her friendly demeanor and attention to detail reassure both parents and kids.",
+        "clientRating": 4.5
+      },
+      {
+        "clientName": "Emily Davis",
+        "clientImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6FJdA2Gwecv-XpzyCuxHQ3O7V7QNhAo4WIzLvGhvJ5NieRHoV311KSKzErBEUH3Uu0ag&usqp=CAU",
+        "details": "Dr. Rodriguez goes above and beyond to make pediatric visits stress-free. Her dedication to children's health is commendable.",
+        "clientRating": 4.5
+      },
+      {
+        "clientName": "Olivia Turner",
+        "clientImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdWzqu56KleKARsCW-sm6QjOvE_rJd_eDpHg&usqp=CAU",
+        "details": "We're grateful for Dr. Rodriguez's expertise. Her approach to pediatric care is exceptional, and our child loves visiting her.",
+        "clientRating": 4.3
+      }
+    ],
+    "location": "Children's Clinic",
+    "price": "$120 per pediatric consultation",
+    "businessHours": {
+      "Monday": "10 AM - 6 PM",
+      "Tuesday": "10 AM - 6 PM",
+      "Wednesday": "10 AM - 6 PM",
+      "Thursday": "10 AM - 6 PM",
+      "Friday": "10 AM - 6 PM"
+    },
+    "hospitalLocations": [
+      {
+        "hospitalName": "Children's Hospital",
+        "address": "321 Kids Avenue, Childville, State 98765"
+      },
+      {
+        "hospitalName": "Happy Kids Clinic",
+        "address": "654 Joyful Street, Kiddietown, State 43210"
+      },
+      {
+        "hospitalName": "Sunshine Pediatrics",
+        "address": "987 Sunny Lane, Happyville, State 24680"
+      }
+    ],
+    "category": "Pediatrics",
+    "education": [
+      {
+        "degree": "MD in Pediatrics",
+        "school": "Children's Medical College",
+        "year": 2007
+      },
+      {
+        "degree": "Pediatric Neurology Fellowship",
+        "school": "Pediatric Neurology Institute",
+        "year": 2012
+      }
+    ],
+    "services": [
+      "Well-Baby Check-ups",
+      "Immunizations",
+      "Developmental Assessments",
+      "Common Childhood Illness Management",
+      "Parental Guidance"
+    ],
+    "specializations": [
+      "Child Development",
+      "Pediatric Allergies",
+      "Adolescent Medicine",
+      "Behavioral Pediatrics"
+    ],
+    "hospitalExperiences": [
+      { "hospitalName": "Children's Hospital", "yearsOfWork": 6 },
+      { "hospitalName": "Happy Kids Clinic", "yearsOfWork": 4 },
+      { "hospitalName": "Sunshine Pediatrics", "yearsOfWork": 2 }
+    ],
+    "awards": [
+      {
+        "name": "Excellence in Pediatric Care 2021",
+        "details": "Recognized for outstanding contributions to pediatric care, demonstrating exceptional skills in child health and development."
+      },
+      {
+        "name": "Top Pediatrician Award 2020",
+        "details": "Awarded as a top pediatrician for providing exemplary care, fostering a positive environment, and promoting child well-being."
+      },
+      {
+        "name": "Community Service in Child Health 2019",
+        "details": "Acknowledged for community service in child health, making a positive impact on the well-being of children and families."
+      },
+      {
+        "name": "Innovative Approaches in Pediatric Neurology 2016",
+        "details": "Honored for introducing innovative approaches in pediatric neurology, contributing to advancements in the field of child neurology."
+      }
+    ]
+  },
+  {
+    "name": "Dr. Michael Anderson",
+    "image": "https://murdochorthopaedic.com.au/wp-content/uploads/2018/06/720x678-Mike-1-300x283.jpg",
+    "about": "Orthopedic surgeon specializing in sports injuries and joint health. Dedicated to helping patients regain mobility and live an active, pain-free life.",
+    "ratings": 4.7,
+    "availableTime": "Monday to Friday, 9 AM - 5 PM",
+    "reviews": [
+      {
+        "clientName": "Ryan Turner",
+        "clientImage": "https://m.media-amazon.com/images/M/MV5BM2VhNzBhMjktMzJhOS00M2IzLTg3ZGYtMjM4YmQxZTg2NTRmXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_.jpg",
+        "details": "Dr. Anderson's expertise in orthopedics is evident. His treatment for my sports injury was effective, and I'm back on the field.",
+        "clientRating": 4.9
+      },
+      {
+        "clientName": "Sophia Davis",
+        "clientImage": "https://www.protherapymn.com/wp-content/uploads/2023/08/PXL_20230727_172156656.PORTRAIT-scaled.jpg",
+        "details": "I appreciate Dr. Anderson's thoroughness in explaining the treatment process. His commitment to patient care is commendable.",
+        "clientRating": 4.7
+      },
+      {
+        "clientName": "Emma Thompson",
+        "clientImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRANBhesUJ9E2mER2AzZYqn0eSe5m45P96Low&usqp=CAU",
+        "details": "Dr. Anderson's approach to joint health is holistic. Grateful for his guidance throughout my recovery journey.",
+        "clientRating": 4.5
+      },
+      {
+        "clientName": "Noah Williams",
+        "clientImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTll9s1LKIle-3pJYol_xx0MK5qyIkTl1SnQw&usqp=CAU",
+        "details": "Excellent orthopedic care from Dr. Anderson. His expertise and personalized treatment plan made a significant difference in my mobility.",
+        "clientRating": 4.8
+      }
+    ],
+    "location": "OrthoCare Center",
+    "price": "$180 per orthopedic consultation",
+    "businessHours": {
+      "Monday": "8 AM - 4 PM",
+      "Tuesday": "8 AM - 4 PM",
+      "Wednesday": "8 AM - 4 PM",
+      "Thursday": "8 AM - 4 PM"
+    },
+    "hospitalLocations": [
+      {
+        "hospitalName": "OrthoCare Center",
+        "address": "876 Joint Street, Orthoville, State 13579"
+      },
+      {
+        "hospitalName": "Sports Medicine Institute",
+        "address": "543 Sports Avenue, Fitnessville, State 24680"
+      },
+      {
+        "hospitalName": "Joint Health Clinic",
+        "address": "210 Mobility Lane, Flextown, State 98765"
+      }
+    ],
+    "category": "Orthopedics",
+    "education": [
+      {
+        "degree": "MD in Orthopedic Surgery",
+        "school": "Orthopedic Surgery Institute",
+        "year": 2009
+      },
+      {
+        "degree": "MSc in Sports Medicine",
+        "school": "Sports Medicine University",
+        "year": 2014
+      }
+    ],
+    "services": [
+      "Sports Injury Treatment",
+      "Joint Replacement Consultation",
+      "Orthopedic Surgeries",
+      "Arthritis Management",
+      "Rehabilitation Programs"
+    ],
+    "specializations": [
+      "Sports Medicine",
+      "Joint Health",
+      "Orthopedic Surgery",
+      "Musculoskeletal Disorders"
+    ],
+    "hospitalExperiences": [
+      { "hospitalName": "OrthoCare Center", "yearsOfWork": 7 },
+      { "hospitalName": "Sports Medicine Institute", "yearsOfWork": 5 },
+      { "hospitalName": "Joint Health Clinic", "yearsOfWork": 3 }
+    ],
+    "awards": [
+      {
+        "name": "Outstanding Orthopedic Surgeon 2022",
+        "details": "Acknowledged as an outstanding orthopedic surgeon, providing exceptional surgical expertise and improving patient mobility."
+      },
+      {
+        "name": "Sports Medicine Excellence Award 2021",
+        "details": "Recognized for excellence in sports medicine, contributing to the advancement of sports injury treatment and prevention."
+      },
+      {
+        "name": "Top Doctor in Orthopedics 2020",
+        "details": "Awarded as a top doctor in orthopedics, demonstrating excellence in patient care, surgical skills"
+      },
+      {
+        "name": "Top Doctor in Orthopedics 2020",
+        "details": "Awarded as a top doctor in orthopedics, demonstrating excellence in patient care, surgical skills"
+      }
+    ]
+  }
+]
