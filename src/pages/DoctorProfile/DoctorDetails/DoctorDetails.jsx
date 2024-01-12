@@ -15,8 +15,8 @@ const DoctorDetails = ({ loaddedData }) => {
   return (
     <section className="px-5 lg:px-12 my-20 ">
       <div className="hero  bg-white">
-        <div className=" flex w-full p-5 justify-between gap-5 flex-col lg:flex-row">
-          <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
+        <div className=" flex w-full lg:h-[300px] p-5 justify-between gap-5 flex-col lg:flex-row">
+          <img src={image} className="max-w-sm h-full rounded-lg shadow-2xl" />
           <div className="flex-grow">
             <h1 className="text-4xl font-bold">{name}</h1>
             <p>{category}</p>

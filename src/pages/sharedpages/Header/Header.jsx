@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/img/Group 1.png';
+import { useContext } from 'react';
+import { AuthContext } from '../../../AuthProvaider/AuthProvaider';
+
 const Header = () => {
+  const { user, logout } = useContext(AuthContext);
+  const handlerLogout = () => {
+    logout().then().catch();
+  };
   const navLink = (
     <>
       <li>
@@ -12,9 +19,21 @@ const Header = () => {
       <li>
         <Link to="/appointment">Appointment</Link>
       </li>
-      <li>
-        <Link to="/login">login</Link>
-      </li>
+      {user ? (
+        <div className="flex items-center gap-2">
+          <img className="w-10 h-10 rounded-full" src={user?.photoURL} alt="" />
+          <button
+            onClick={handlerLogout}
+            className="btn btn-outline border text-white btn-neutral"
+          >
+            Logout
+          </button>
+        </div>
+      ) : (
+        <li>
+          <Link to="/login">login</Link>
+        </li>
+      )}
     </>
   );
   return (
