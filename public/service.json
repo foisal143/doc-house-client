@@ -1,0 +1,61 @@
+[
+  {
+    "name": "Dental Checkup",
+    "image": "https://www.mediacenterdental.com/wp-content/uploads/dental-checkup-2010.jpg",
+    "slot": [
+      { "time": "10:00 AM - 11:00 AM" },
+      { "time": "2:30 PM - 3:30 PM" },
+      { "time": "9:15 AM - 10:15 AM" }
+    ]
+  },
+  {
+    "name": "Teeth Cleaning",
+    "image": "https://www.shutterstock.com/image-vector/happy-tooth-icon-cute-characters-600nw-1031848378.jpg",
+
+    "slot": [
+      { "time": "11:30 AM - 12:30 PM" },
+      { "time": "1:45 PM - 2:45 PM" },
+      { "time": "10:00 AM - 11:00 AM" }
+    ]
+  },
+  {
+    "name": "Dental X-rays",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhxsBrw8ki0Ef6hzFuDb_GT3QeCKMKrOtjTA&usqp=CAU",
+
+    "slot": [
+      { "time": "3:00 PM - 4:00 PM" },
+      { "time": "11:15 AM - 12:15 PM" },
+      { "time": "2:30 PM - 3:30 PM" }
+    ]
+  },
+  {
+    "name": "Orthodontic Consultation",
+    "image": "https://media.istockphoto.com/id/1269429519/vector/checking-the-health-of-a-tooth.jpg?s=612x612&w=0&k=20&c=COOjHwBFFdpRpnaRwLNd-onrou9H65386gov8izHrj8=",
+
+    "slot": [
+      { "time": "9:30 AM - 10:30 AM" },
+      { "time": "12:45 PM - 1:45 PM" },
+      { "time": "2:00 PM - 3:00 PM" }
+    ]
+  },
+  {
+    "name": "Tooth Extraction",
+    "image": "https://img.freepik.com/free-vector/tooth-removal-cartoon-illustration_74855-17131.jpg",
+
+    "slot": [
+      { "time": "11:00 AM - 12:00 PM" },
+      { "time": "10:15 AM - 11:15 AM" },
+      { "time": "1:30 PM - 2:30 PM" }
+    ]
+  },
+  {
+    "name": "Dental Implant Surgery",
+    "image": "https://mysmiledentalgroup.com/wp-content/uploads/2023/07/24556201_qz70_d2s2_220301-scaled-e1688443681803.jpg",
+
+    "slot": [
+      { "time": "2:30 PM - 3:30 PM" },
+      { "time": "12:00 PM - 1:00 PM" },
+      { "time": "9:45 AM - 10:45 AM" }
+    ]
+  }
+]

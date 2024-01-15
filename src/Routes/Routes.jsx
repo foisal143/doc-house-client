@@ -4,11 +4,13 @@ import Home from '../pages/Home/Home/Home';
 import DoctorProfile from '../pages/DoctorProfile/DoctoreProfile/DoctorProfile';
 import Login from '../pages/Login/Login';
 import Registar from '../pages/Registar/Registar';
+import Erropage from '../Errorpage/Erropage';
+import AppoinmentPage from '../pages/AppoinmentPage/AppoinmentPage/AppoinmentPage';
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Main />,
-    errorElement: <p>this is an error page</p>,
+    errorElement: <Erropage></Erropage>,
     children: [
       {
         path: '/',
@@ -27,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: 'registar',
         element: <Registar></Registar>,
+      },
+      {
+        path: 'appointment',
+        element: <AppoinmentPage />,
       },
     ],
   },
