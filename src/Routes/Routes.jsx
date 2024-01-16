@@ -6,6 +6,11 @@ import Login from '../pages/Login/Login';
 import Registar from '../pages/Registar/Registar';
 import Erropage from '../Errorpage/Erropage';
 import AppoinmentPage from '../pages/AppoinmentPage/AppoinmentPage/AppoinmentPage';
+import DashboardLayout from '../layouts/DashboardLayout';
+import Appointment from '../pages/Dashboard/Appointment/Appointment';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import AllUser from '../pages/Dashboard/AllUser/AllUser';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -32,7 +37,29 @@ const router = createBrowserRouter([
       },
       {
         path: 'appointment',
-        element: <AppoinmentPage />,
+        element: (
+          <PrivateRoute>
+            <AppoinmentPage />
+          </PrivateRoute>
+        ),
+      },
+    ],
+  },
+  {
+    path: 'dashboard',
+    element: (
+      <PrivateRoute>
+        <DashboardLayout />
+      </PrivateRoute>
+    ),
+    children: [
+      {
+        path: '/dashboard',
+        element: <Appointment />,
+      },
+      {
+        path: 'all-user',
+        element: <AllUser />,
       },
     ],
   },

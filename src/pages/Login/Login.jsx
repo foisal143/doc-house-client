@@ -1,13 +1,17 @@
 import { useContext, useState } from 'react';
 import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvaider/AuthProvaider';
 import toast from 'react-hot-toast';
+import postUserToDB from '../../utilites/PostUserToDB';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { loginUser } = useContext(AuthContext);
+  const location = useLocation();
+  const from = location?.state?.pathname || '/';
   const nvaigate = useNavigate();
+
   const handlerFormSubmit = e => {
     e.preventDefault();
     const form = e.target;
@@ -15,10 +19,14 @@ const Login = () => {
     const password = form.password.value;
     loginUser(email, password)
       .then(result => {
-        const loaggedUser = result.user;
-        console.log(loaggedUser);
+        const loggedUser = result.user;
         toast.success('Sign In Success');
-        nvaigate('/');
+        nvaigate(from, { replace: true });
+        const userInfo = {
+          name: loggedUser.displayName,
+          email: loggedUser.email,
+        };
+        postUserToDB(userInfo);
       })
       .catch(er => toast.error(er.message));
   };

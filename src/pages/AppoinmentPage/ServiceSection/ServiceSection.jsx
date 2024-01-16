@@ -1,6 +1,10 @@
 import moment from 'moment';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
+import toast from 'react-hot-toast';
+import { AuthContext } from '../../../AuthProvaider/AuthProvaider';
 const ServiceSection = ({ value }) => {
+  const closeBtn = useRef();
+  const { user } = useContext(AuthContext);
   const [services, setServices] = useState([]);
   const [service, setService] = useState(null);
   const [time, setTime] = useState('');
@@ -17,11 +21,40 @@ const ServiceSection = ({ value }) => {
     console.log(slot);
   };
 
+  // handler submit appoint ment data
   const handleSubmit = e => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log('Form data submitted:');
+    const form = e.target;
+    const date = form.date.value;
+    const time = form.time.value;
+    const name = form.name.value;
+    const email = form.email.value;
+    const phoneNum = form.phoneNumber.value;
+    const appointmentInfo = {
+      date,
+      time,
+      name,
+      email,
+      serviceName: service?.name,
+      phoneNumber: phoneNum,
+    };
+    fetch('http://localhost:5000/appointments', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(appointmentInfo),
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.insertedId) {
+          toast.success('appointment apply done');
+          closeBtn.current.click();
+          form.reset();
+        }
+      });
   };
+
   return (
     <section className="my-20">
       <div className="text-center">
@@ -91,7 +124,10 @@ const ServiceSection = ({ value }) => {
           <div className="modal-box">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <button className="btn btn-sm btn-circle btn-success absolute right-2 top-2">
+              <button
+                ref={closeBtn}
+                className="btn btn-sm btn-circle btn-success absolute right-2 top-2"
+              >
                 ✕
               </button>
             </form>
@@ -179,7 +215,8 @@ const ServiceSection = ({ value }) => {
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="email"
+                    value={user?.email}
+                    readOnly
                     className="mt-1 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-500 block w-full"
                     required
                   />

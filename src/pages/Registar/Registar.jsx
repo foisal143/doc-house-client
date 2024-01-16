@@ -3,6 +3,7 @@ import { IoMdEye, IoMdEyeOff } from 'react-icons/io';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvaider/AuthProvaider';
 import toast from 'react-hot-toast';
+import postUserToDB from '../../utilites/PostUserToDB';
 
 const Registar = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -23,6 +24,11 @@ const Registar = () => {
           .then(() => {
             toast.success('Sign Up Success');
             navigate('/login');
+            const userInfo = {
+              name: loggedUser.displayName,
+              email: loggedUser.email,
+            };
+            postUserToDB(userInfo);
           })
           .catch(er => toast.error(er.message));
       })
