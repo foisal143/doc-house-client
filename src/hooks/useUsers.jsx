@@ -1,12 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
+import useAxiosSceure from './useAxiosSceure';
 
 const useUsers = () => {
+  const axiosSceure = useAxiosSceure();
   const { data: users = [], refetch } = useQuery({
     queryKey: ['users'],
     queryFn: async () => {
-      const res = await fetch(' http://localhost:5000/users');
-      const data = res.json();
-      return data;
+      const res = await axiosSceure.get('/users');
+      if (res.error) {
+        return [];
+      }
+      return res.data;
     },
   });
   return [users, refetch];

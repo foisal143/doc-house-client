@@ -3,7 +3,7 @@ import Swal from 'sweetalert2/dist/sweetalert2.js';
 import 'sweetalert2/src/sweetalert2.scss';
 const AllUser = () => {
   const [users, refetch] = useUsers();
-
+  console.log(users);
   const handlerMakeAdmin = id => {
     Swal.fire({
       title: 'Are you sure?',
@@ -69,10 +69,10 @@ const AllUser = () => {
         <table className="table">
           {/* head */}
           <thead>
-            <tr>
+            <tr className="bg-slate-200">
               <th></th>
               <th>Email</th>
-              <th>Role</th>
+              <th className="text-center">Role</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -81,7 +81,7 @@ const AllUser = () => {
               <tr key={user._id}>
                 <th>{i + 1}</th>
                 <td>{user.email}</td>
-                <td>
+                <td className="text-center">
                   {user.role === 'admin' ? (
                     'Admin'
                   ) : (
