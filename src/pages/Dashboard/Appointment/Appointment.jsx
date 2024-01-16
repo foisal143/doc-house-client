@@ -6,7 +6,6 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 const Appointment = () => {
   const [appointments] = useAppointment();
-  console.log(appointments);
   const [startDate, setStartDate] = useState(new Date());
   const date = moment(startDate).format('MMMM D YYYY ');
   const filterByDate = appointments.filter(item => item.date === date);
