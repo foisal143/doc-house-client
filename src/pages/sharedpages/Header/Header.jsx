@@ -2,12 +2,15 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/img/Group 1.png';
 import { useContext } from 'react';
 import { AuthContext } from '../../../AuthProvaider/AuthProvaider';
+import IsAdmin from '../../../hooks/IsAdmin';
 
 const Header = () => {
   const { user, logout } = useContext(AuthContext);
+  const [isadmin] = IsAdmin();
   const handlerLogout = () => {
     logout().then().catch();
   };
+
   const navLink = (
     <>
       <li>
@@ -16,9 +19,15 @@ const Header = () => {
       <li>
         <Link to="/about">About</Link>
       </li>
-      <li>
-        <Link to="/dashboard">Dashboard</Link>
-      </li>
+      {isadmin ? (
+        <li>
+          <Link to="/dashboard/admin-home">Dashboard</Link>
+        </li>
+      ) : (
+        <li>
+          <Link to="/dashboard">Dashboard</Link>
+        </li>
+      )}
       <li>
         <Link to="/appointment">Appointment</Link>
       </li>

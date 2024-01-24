@@ -1,6 +1,7 @@
 [
   {
     "name": "Dental Checkup",
+    "price": 240,
     "image": "https://www.mediacenterdental.com/wp-content/uploads/dental-checkup-2010.jpg",
     "slot": [
       { "time": "10:00 AM - 11:00 AM" },
@@ -10,6 +11,7 @@
   },
   {
     "name": "Teeth Cleaning",
+    "price": 500,
     "image": "https://www.shutterstock.com/image-vector/happy-tooth-icon-cute-characters-600nw-1031848378.jpg",
 
     "slot": [
@@ -20,6 +22,7 @@
   },
   {
     "name": "Dental X-rays",
+    "price": 574,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhxsBrw8ki0Ef6hzFuDb_GT3QeCKMKrOtjTA&usqp=CAU",
 
     "slot": [
@@ -30,6 +33,7 @@
   },
   {
     "name": "Orthodontic Consultation",
+    "price": 250,
     "image": "https://media.istockphoto.com/id/1269429519/vector/checking-the-health-of-a-tooth.jpg?s=612x612&w=0&k=20&c=COOjHwBFFdpRpnaRwLNd-onrou9H65386gov8izHrj8=",
 
     "slot": [
@@ -40,6 +44,7 @@
   },
   {
     "name": "Tooth Extraction",
+    "price": 220,
     "image": "https://img.freepik.com/free-vector/tooth-removal-cartoon-illustration_74855-17131.jpg",
 
     "slot": [
@@ -50,6 +55,7 @@
   },
   {
     "name": "Dental Implant Surgery",
+    "price": 300,
     "image": "https://mysmiledentalgroup.com/wp-content/uploads/2023/07/24556201_qz70_d2s2_220301-scaled-e1688443681803.jpg",
 
     "slot": [

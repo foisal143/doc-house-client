@@ -58,6 +58,7 @@ const AuthProvaider = ({ children }) => {
       })
         .then(res => res.json())
         .then(data => {
+          console.log(data);
           localStorage.setItem('Ac-Token', data.token);
         });
     });

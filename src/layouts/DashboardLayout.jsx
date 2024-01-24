@@ -5,7 +5,7 @@ import IsAdmin from '../hooks/IsAdmin';
 const DashboardLayout = () => {
   // todo: admin create
   const [isadmin] = IsAdmin();
-  const admin = isadmin?.admin;
+
   return (
     <>
       <div className=" lg:w-[1080px] w-full xl:w-[1200px] h-[108px] z-10 fixed bg-green-950">
@@ -31,10 +31,10 @@ const DashboardLayout = () => {
             className="drawer-overlay"
           ></label>
           <ul className="menu p-4 w-80 min-h-full bg-white text-base-content">
-            {admin ? (
+            {isadmin ? (
               <>
                 <li>
-                  <Link to="/dashboard"> Admin Home </Link>
+                  <Link to="/dashboard/admin-home"> Admin Home </Link>
                 </li>
                 <li>
                   <Link to="all-user">All Users</Link>
@@ -52,10 +52,10 @@ const DashboardLayout = () => {
                   <Link to="/dashboard">My Appointments</Link>
                 </li>
                 <li>
-                  <Link to="my-reviews">My Reviews</Link>
+                  <Link to="my-reviews">My Reviews (not implimented)</Link>
                 </li>
                 <li>
-                  <Link to="my-history">My History</Link>
+                  <Link to="my-history">My History (not implimented) </Link>
                 </li>
                 <li>
                   <Link to="/">Home</Link>

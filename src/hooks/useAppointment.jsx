@@ -4,10 +4,11 @@ import { useQuery } from '@tanstack/react-query';
 import useAxiosSceure from './useAxiosSceure';
 
 const useAppointment = () => {
-  const { user } = useContext(AuthContext);
+  const { user, loader } = useContext(AuthContext);
   const axiosSciure = useAxiosSceure();
   const { data: appointments = [], refetch } = useQuery({
     queryKey: ['appointments', user?.email],
+    enabled: !loader,
     // queryFn: async () => {
     //   const res = await fetch(
     //     `http://localhost:5000/appointments?email=${user?.email}`,

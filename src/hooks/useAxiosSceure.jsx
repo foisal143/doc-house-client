@@ -2,18 +2,20 @@ import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvaider/AuthProvaider';
 import axios from 'axios';
+const axiosSciure = axios.create({
+  baseURL: 'http://localhost:5000',
+});
+
 const useAxiosSceure = () => {
   const navigate = useNavigate();
   const { logout } = useContext(AuthContext);
-  const axiosSciure = axios.create({
-    baseURL: 'http://localhost:5000',
-  });
+
+  const accessToken = localStorage.getItem('Ac-Token');
 
   // Add an interceptor for handling requests
   axiosSciure.interceptors.request.use(
     config => {
       // Add the access token to the headers if available in localStorage
-      const accessToken = localStorage.getItem('Ac-Token');
       if (accessToken) {
         config.headers.Authorization = `Bearer ${accessToken}`;
       }

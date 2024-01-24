@@ -1,9 +1,10 @@
 import Swal from 'sweetalert2';
 import useDoctors from '../../../hooks/useDoctors';
+import useAxiosSceure from '../../../hooks/useAxiosSceure';
 
 const ManageDoctor = () => {
   const [doctors, refetch] = useDoctors();
-
+  const axiosSciure = useAxiosSceure();
   const handlerDelete = id => {
     Swal.fire({
       title: 'Are you sure?',
@@ -15,12 +16,11 @@ const ManageDoctor = () => {
       confirmButtonText: 'Yes, delete it!',
     }).then(result => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete-doctors/${id}`, {
-          method: 'DELETE',
-        })
-          .then(res => res.json())
-          .then(data => {
-            if (data.deletedCount > 0) {
+        axiosSciure
+          .delete(`/delete-doctors/${id}`)
+
+          .then(res => {
+            if (res.data.deletedCount > 0) {
               refetch();
               Swal.fire({
                 title: 'Deleted!',

@@ -7,11 +7,13 @@ import Registar from '../pages/Registar/Registar';
 import Erropage from '../Errorpage/Erropage';
 import AppoinmentPage from '../pages/AppoinmentPage/AppoinmentPage/AppoinmentPage';
 import DashboardLayout from '../layouts/DashboardLayout';
-import Appointment from '../pages/Dashboard/Appointment/Appointment';
+
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import AllUser from '../pages/Dashboard/AllUser/AllUser';
 import AddDoctor from '../pages/Dashboard/AddDoctor/AddDoctor';
 import ManageDoctor from '../pages/Dashboard/ManageDoctor/ManageDoctor';
+import AddminHome from '../pages/Dashboard/AdminHome/AddminHome';
+import Appointment from '../pages/Dashboard/Appointment/Appointment';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <Appointment />,
+      },
+      {
+        path: 'admin-home',
+        element: <AddminHome />,
       },
       {
         path: 'all-user',

@@ -1,16 +1,19 @@
 import { useEffect, useState } from 'react';
+import useAxiosSceure from '../hooks/useAxiosSceure';
 
 const DoctorsData = () => {
   const [doctors, setDoctors] = useState([]);
+  const axiosSciure = useAxiosSceure();
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    fetch('http://localhost:5000/doctors')
-      .then(res => res.json())
-      .then(data => {
-        setDoctors(data);
+    axiosSciure
+      .get('http://localhost:5000/doctors')
+
+      .then(res => {
+        setDoctors(res.data);
         setLoading(false);
       });
-  }, []);
+  }, [axiosSciure]);
   return [doctors, loading];
 };
 

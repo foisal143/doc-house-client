@@ -2,8 +2,10 @@ import moment from 'moment';
 import { useContext, useEffect, useRef, useState } from 'react';
 import toast from 'react-hot-toast';
 import { AuthContext } from '../../../AuthProvaider/AuthProvaider';
+import useAxiosSceure from '../../../hooks/useAxiosSceure';
 const ServiceSection = ({ value }) => {
   const closeBtn = useRef();
+  const axiosSciure = useAxiosSceure();
   const { user } = useContext(AuthContext);
   const [services, setServices] = useState([]);
   const [service, setService] = useState(null);
@@ -18,7 +20,6 @@ const ServiceSection = ({ value }) => {
   const handlerChoseService = id => {
     const singleService = services.find(item => item._id === id);
     setService(singleService);
-    console.log(slot);
   };
 
   // handler submit appoint ment data
@@ -37,17 +38,13 @@ const ServiceSection = ({ value }) => {
       email,
       serviceName: service?.name,
       phoneNumber: phoneNum,
+      price: service.price,
     };
-    fetch('http://localhost:5000/appointments', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(appointmentInfo),
-    })
-      .then(res => res.json())
+    axiosSciure
+      .post('/appointments', appointmentInfo)
+
       .then(data => {
-        if (data.insertedId) {
+        if (data.data.insertedId) {
           toast.success('appointment apply done');
           closeBtn.current.click();
           form.reset();

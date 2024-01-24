@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { FaImage } from 'react-icons/fa';
+import useAxiosSceure from '../../../hooks/useAxiosSceure';
 
 const AddDoctor = () => {
+  const axiosSciure = useAxiosSceure();
   const [image, setImage] = useState('');
   const handleImageChange = e => {
     const file = e.target.files[0];
@@ -19,22 +21,37 @@ const AddDoctor = () => {
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
+    const iamgefile = form.image.files[0];
     const category = form.specialty.value;
-    const doctorInfo = { name, email, category, image };
-    console.log('Form Data:', doctorInfo);
 
-    fetch('http://localhost:5000/add-doctors', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(doctorInfo),
-    })
+    const formData = new FormData();
+    formData.append('image', iamgefile);
+
+    fetch(
+      `https://api.imgbb.com/1/upload?key=${import.meta.env.VITE_IMAGE_KEY}`,
+      {
+        method: 'post',
+        body: formData,
+      }
+    )
       .then(res => res.json())
       .then(data => {
-        if (data.insertedId) {
-          toast.success('Doctor added success');
-          form.reset();
+        if (data.success) {
+          const doctorInfo = {
+            name,
+            email,
+            category,
+            image: data.data.display_url,
+          };
+          axiosSciure
+            .post('/add-doctors', doctorInfo)
+
+            .then(res => {
+              if (res.data.insertedId) {
+                toast.success('Doctor added success');
+                form.reset();
+              }
+            });
         }
       });
   };
